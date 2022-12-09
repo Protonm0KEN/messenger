@@ -1,0 +1,19 @@
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  width: 100%;
+
+}
+.messenger{
+  min-height: 800px;
+  background-image: url(./assets/images/messenger-bg.png);
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

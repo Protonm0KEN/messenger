@@ -1,0 +1,28 @@
+
+.header{
+    background: #323232;
+    &__content{
+        padding: 31px 20px;
+        &__profile{
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            &__info{
+                &-nickName{
+                    font-family: 'Roboto';
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 14px;
+                    font-weight: 500;
+                }
+                &-status{
+                    font-family: 'Roboto';
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+    border-radius: 10px 10px 0px 0px;
+}

@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './App.scss';
+import MessengerFooter from './components/MessengerFooter/MessengerFooter';
+import MessengerHeader from './components/MessengerHeader/MessengerHeader';
+import MessengerMain from './components/MessengerMain/MessengerMain';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='App__container container'>
+        <div className='messenger'>
+          <div className='messenger__wrapper'>
+            <MessengerHeader />
+            <MessengerMain/>
+            <MessengerFooter/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

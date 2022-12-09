@@ -1,0 +1,32 @@
+.footer{
+    background: #323232;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &-input{
+            outline: none;
+            border: none;
+            background: #323232;
+            color: white;
+        }
+        &-input::-moz-placeholder{
+            color: #ffffff;
+        }
+        &-input::-webkit-input-placeholder{
+            color: #ffffff;
+        }
+        &-button{
+            &{
+                outline: none;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
