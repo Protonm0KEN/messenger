@@ -1,6 +1,7 @@
 import React from 'react'
 import alexandr from '../../assets/icons/Alexandr.png'
 import './MessengerHeader.scss'
+
 const MessengerHeader = () => {
     return (
         <header className="header">

@@ -10,7 +10,7 @@ const MessengerFooter = ({handleOpenModal, setMessage, message, items, setItems}
     }
     const handlePushItem = (e) => {
         e.preventDefault()
-        if(message){
+        if (message) {
             setItems(prev => [...prev, message])
         }
         console.log('Список сообщений', items)

@@ -1,7 +1,8 @@
 import './Modal.scss'
-export const Modal = ({openModal, handleCloseModal, setUrl, urlInput, setComment, comment}) => {
+
+export const Modal = ({openModal, handleCloseModal, setUrl, url, setComment, comment}) => {
     const text = 'Отправить картинку'
-    const url = 'URL'
+    const textUrl = 'URL'
     const review = 'Комментарий'
     const onChangeUrl = (e) => {
         setUrl(e.target.value)
@@ -16,9 +17,9 @@ export const Modal = ({openModal, handleCloseModal, setUrl, urlInput, setComment
                 <form className="modal__inputs">
 
                     <div className="modal__group">
-                        <input type="text" onChange={onChangeUrl} className="url__input" required value={urlInput}/>
+                        <input type="text" onChange={onChangeUrl} className="url__input" required value={url}/>
                         <span></span>
-                        <label>{url}</label>
+                        <label>{textUrl}</label>
                     </div>
                     <div className="modal__group">
                         <input type="text" onChange={onChangeComment} className="url__input" required value={comment}/>

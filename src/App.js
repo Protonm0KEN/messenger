@@ -10,7 +10,6 @@ function App() {
     const getHours = date.getHours()
     const getMinutes = date.getMinutes();
     const [items, setItems] = useState([])
-
     const [comment, setComment] = useState('');
     const [url, setUrl] = useState('');
     const [message, setMessage] = useState('');
@@ -32,7 +31,10 @@ function App() {
                                 return <div className='message' key={index}>
                                     <div className='message__content'>{item}</div>
                                     <div className='message__date'>{getHours} : {getMinutes}</div>
-                                </div> }): null}
+                                </div>
+                            }) : null
+                            }
+                            {}
                         </div>
                         <MessengerFooter
                             message={message}
@@ -46,7 +48,7 @@ function App() {
                 <Modal
                     comment={comment}
                     setComment={setComment}
-                    urlInput={url}
+                    url={url}
                     setUrl={setUrl}
                     openModal={openModal}
                     handleCloseModal={handleCloseModal}/>
