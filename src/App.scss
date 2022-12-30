@@ -18,3 +18,28 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.main{
+  display: flex;
+  flex-direction: column;
+  min-height: 800px;
+  gap: 60px;
+}
+.message{
+  display: flex;
+  column-gap: 50px;
+  align-items: center;
+  justify-content: right;
+  padding: 10px;
+  &__content{
+    background: #C4BFFF;
+    border-radius: 15px 15px 15px 0px;
+    padding: 10px;
+  }
+  &__date{
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #323232;
+
+  }
+}
