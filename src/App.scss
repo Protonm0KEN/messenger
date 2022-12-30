@@ -33,7 +33,11 @@
   &__content{
     background: #C4BFFF;
     border-radius: 15px 15px 15px 0px;
-    padding: 10px;
+    padding: 10px 37px 10px 0px;
+    max-width: 168px;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: right;
   }
   &__date{
     font-size: 14px;
