@@ -11,7 +11,7 @@ const MessengerFooter = ({handleOpenModal, setMessage, message, items, setItems}
     const handlePushItem = (e) => {
         e.preventDefault()
         if(message){
-            items.push(message)
+            setItems(prev => [...prev, message])
         }
         console.log('Список сообщений', items)
     }
@@ -20,7 +20,7 @@ const MessengerFooter = ({handleOpenModal, setMessage, message, items, setItems}
             <div className='footer__content'>
                 <form onSubmit={handlePushItem}>
                     <input onChange={handleSetMessage} value={message} placeholder='Написать сообщение...'
-                           className='footer__content-input'></input>
+                           className='footer__content-input'/>
                 </form>
                 <button className={'sendMessage'}><img className='send-img' src={sendMessageImg} alt=""/></button>
                 <button onClick={handleOpenModal} className='footer__content-button'>

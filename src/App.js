@@ -28,7 +28,10 @@ function App() {
                     <div className='messenger__wrapper'>
                         <MessengerHeader/>
                         <div className="main">
-                            {items ? items.map((item, index) => {return <div className='message' key={index}><div className='message__content'>{item}</div><div className='message__date'>{getHours} : {getMinutes}</div></div>}) : ''}
+                            {items ? items.map((item, index) => {return <div className='message' key={index}>
+                                <div className='message__content'>{item}</div>
+                                <div className='message__date'>{getHours} : {getMinutes}</div>
+                            </div>}) : ''}
                         </div>
                         <MessengerFooter
                             message={message}
