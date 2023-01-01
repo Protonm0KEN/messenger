@@ -22,7 +22,7 @@ const MessengerFooter = ({handleOpenModal, setMessage, message, items, setItems}
                     <input onChange={handleSetMessage} value={message} placeholder='Написать сообщение...'
                            className='footer__content-input'/>
                 </form>
-                <button className={'sendMessage'}><img className='send-img' src={sendMessageImg} alt=""/></button>
+                <button onClick={handlePushItem} className={'sendMessage'}><img className='send-img' src={sendMessageImg} alt=""/></button>
                 <button onClick={handleOpenModal} className='footer__content-button'>
                     <img alt='camera' className='' src={camera}></img>
                 </button>
