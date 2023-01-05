@@ -1,6 +1,6 @@
 import './Modal.scss'
 
-export const Modal = ({openModal, handleCloseModal, setUrl, url, setComment, comment}) => {
+export const Modal = ({openModal, handleCloseModal, setUrl, url, setComment, comment, images, setImages}) => {
     const text = 'Отправить картинку'
     const textUrl = 'URL'
     const review = 'Комментарий'
@@ -9,6 +9,14 @@ export const Modal = ({openModal, handleCloseModal, setUrl, url, setComment, com
     }
     const onChangeComment = (e) => {
         setComment(e.target.value)
+    }
+    const handlePushItem = (e) => {
+        e.preventDefault()
+        if (url) {
+            setImages(prev => [...prev, url])
+        }
+        console.log('Список картинок', images)
+        handleCloseModal()
     }
     return (
         <div className={`modal ${openModal ? 'active' : 'noactive'}`}>
@@ -29,7 +37,7 @@ export const Modal = ({openModal, handleCloseModal, setUrl, url, setComment, com
                 </form>
                 <div className="modal__buttons">
                     <button onClick={handleCloseModal} className="delete-button">ОТМЕНА</button>
-                    <button className="send-button">ОТПРАВИТЬ</button>
+                    <button  className="send-button" onClick = {handlePushItem}>ОТПРАВИТЬ</button>
                 </div>
             </div>
         </div>

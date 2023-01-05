@@ -1,15 +1,15 @@
-import './App.scss';
-import MessengerFooter from './components/MessengerFooter/MessengerFooter';
-import MessengerHeader from './components/MessengerHeader/MessengerHeader';
-import {Modal} from "./components/Modal/Modal";
 import React, {useState} from "react";
+import MessengerHeader from "./components/MessengerHeader/MessengerHeader";
+import MessengerFooter from "./components/MessengerFooter/MessengerFooter";
+import {Modal} from "./components/Modal/Modal";
+import './App.scss';
 
-
-function App() {
+const App = () => {
+    const [images, setImages] = useState([])
+    const [items, setItems] = useState([])
     const date = new Date();
     const getHours = date.getHours()
     const getMinutes = date.getMinutes();
-    const [items, setItems] = useState([])
     const [comment, setComment] = useState('');
     const [url, setUrl] = useState('');
     const [message, setMessage] = useState('');
@@ -20,6 +20,7 @@ function App() {
     const handleCloseModal = () => {
         setOpenModal(false);
     };
+    // eslint-disable-next-line no-unused-vars
     return (
         <div className="App">
             <div className='App__container container'>
@@ -27,14 +28,23 @@ function App() {
                     <div className='messenger__wrapper'>
                         <MessengerHeader/>
                         <div className="main">
-                            {items ? items.map((item, index) => {
-                                return <div className='message' key={index}>
-                                    <div className='message__content'>{item}</div>
-                                    <div className='message__date'>{getHours} : {getMinutes}</div>
-                                </div>
-                            }) : null
+                            {url || comment ? images.map((item, index) => {
+                                return (
+                                    <div key={index} className="image">
+                                        <img src={item} alt=""/>
+                                        <p>{comment}</p>
+                                    </div>
+                                )
+                            }) : "" ||
+                            items ? items.map((item, index) => {
+                                return (
+                                    <div key={index} className="message">
+                                        <p className="message__content">{item}</p>
+                                        <p>{getHours} : {getMinutes < 10 ? '0' + getMinutes : getMinutes}</p>
+                                    </div>
+                                )
+                            }) : ''
                             }
-                            {}
                         </div>
                         <MessengerFooter
                             message={message}
@@ -51,10 +61,13 @@ function App() {
                     url={url}
                     setUrl={setUrl}
                     openModal={openModal}
-                    handleCloseModal={handleCloseModal}/>
+                    handleCloseModal={handleCloseModal}
+                    setItems={setItems}
+                    images={images}
+                    setImages={setImages}
+                />
             </div>
         </div>
     );
 }
-
-export default App;
+export default App
