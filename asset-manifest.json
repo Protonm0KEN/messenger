@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/messenger/static/css/main.c307d3b2.css",
+    "main.js": "/messenger/static/js/main.60cc58ce.js",
+    "static/media/messenger-bg.png": "/messenger/static/media/messenger-bg.8f439288797dc62b7269.png",
+    "static/media/free-icon-send-8084272.png": "/messenger/static/media/free-icon-send-8084272.3d371810f0efefdf0828.png",
+    "index.html": "/messenger/index.html",
+    "static/media/Camera.svg": "/messenger/static/media/Camera.8b29153d80913ccc266cd0972225b599.svg",
+    "main.c307d3b2.css.map": "/messenger/static/css/main.c307d3b2.css.map",
+    "main.60cc58ce.js.map": "/messenger/static/js/main.60cc58ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c307d3b2.css",
+    "static/js/main.60cc58ce.js"
+  ]
+}
